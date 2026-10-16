@@ -16,42 +16,45 @@ html, body {
     margin-right: 20px;}
 
 .container-header {
+    width: 100%;
     min-height: 10vh;
     background-color: rgb(19, 37, 119);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 22px;
-    flex-wrap: wrap;}
+    padding: 15px 22px;}
 
-.container-header a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    margin-right: 30px;
-    font-size: 20px;}
-
-.container-header a:hover {
-    color: rgb(10, 117, 160);}
+nav a[aria-current="page"]{
+    font-weight: bold;
+    color: rgb(3, 122, 158);}
 
 .container-left {
     display: flex;
-    align-items: center;}
+    align-items: center;
+    min-width: 0;}
 
 #p-header {
     color: rgb(255, 255, 255);
     font-size: 20px;
     text-align: center;}
 
-#boton-menu {
-    display: none;
-}
+.container-header a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 20px;
+    white-space: nowrap;}
+
+.container-header a:hover {
+    color: rgb(10, 117, 160);}
+/* HEADER */
 
 
 /* MAIN */
 .container-main {
     min-height: 90vh;
-    background: linear-gradient( to right,rgba(0, 0, 0, 0.945),rgba(0, 0, 255, 0.199)),
-    url(imagenes/background.png);
+    background: linear-gradient( to right,rgba(0, 0, 0, 0.774),rgba(3, 13, 102, 0.445)),
+    url(imagenes/background.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -70,12 +73,23 @@ h1 {
     color: rgb(255, 255, 255);
     font-size: clamp(1rem, 2vw, 1.56rem);}
 
+.container-footer {
+    background-color: rgb(19, 37, 119);
+    color: rgb(255 255 255);
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 40px;
+    text-align: center;}
 
 /* TABLETS 768px - 1024px */
 @media (max-width: 1024px) {
 
     .container-main{
-        background-position: center center;}
+        background-position: center center;
+        }
 
     .container-header {
         padding: 15px;}
@@ -110,18 +124,17 @@ h1 {
     .container-main{
         background-position: center center;
         background: linear-gradient( to right,rgba(0, 0, 0, 0.945),rgba(0, 0, 255, 0.199)),
-        url(imagenes/background-mobile.jpeg);}
+        url(imagenes/background.jpeg);}
 
    /* HEADER */
     .container-header {
-        min-height: auto;
         flex-direction: column;
         gap: 15px;
-        padding: 15px;}
+        padding: 15px 10px;}
 
     .container-left {
         justify-content: center;
-        text-align: center;}
+        width: 100%;}
 
     #logo-colegio {
         width: 45px;
@@ -131,15 +144,16 @@ h1 {
         font-size: 18px;}
 
     .container-header nav {
+        width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
         flex-wrap: wrap;
         gap: 10px;}
 
     .container-header a {
         margin-right: 0;
         font-size: 17px;}
+
     .container-main {
         min-height: 90vh;
         background-position: center;}
@@ -147,7 +161,13 @@ h1 {
     .text-main {
         margin-left: 7%;
         margin-right: 7%;
-        max-width: 100%;}}
+        max-width: 100%;}
+    
+    .container-footer {
+    min-height: 8vh;
+    font-size: 16px;
+    padding: 15px;}
+    }
 
 
 /* CELULARES PEQUEÑOS Hasta 480px */
@@ -156,7 +176,7 @@ h1 {
     .container-main{
         background-position: center center;
         background: linear-gradient( to right,rgba(0, 0, 0, 0.945),rgba(0, 0, 255, 0.199)),
-        url(imagenes/background-mobile.jpeg);}
+        url(imagenes/background.jpeg);}
 
     .container-header {
         padding: 10px 12px;}
@@ -188,8 +208,7 @@ h1 {
 
     .container-main{
         background-position: center center;
-        background: linear-gradient( to right,rgba(0, 0, 0, 0.945),rgba(0, 0, 255, 0.199)),
-        url(imagenes/background-mobile-mini.jpeg);}
+        background: linear-gradient( to right,rgba(0, 0, 0, 0.945),rgba(0, 0, 255, 0.199)),url(imagenes/background-mobile.jpg);}
 
     #logo-colegio {
         width: 35px;}
@@ -203,17 +222,10 @@ h1 {
 
     .text-main {
         margin-left: 5%;
-        margin-right: 5%;}}
+        margin-right: 5%;}
 
+    .container-footer {
+        font-size: 14px;}
+    }
 
-.container-footer {
-    background-color: rgb(19, 37, 119);
-    color: rgb(255 255 255);
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    padding: 20px;
-}
 

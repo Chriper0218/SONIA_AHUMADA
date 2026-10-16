@@ -11,7 +11,6 @@ body {
 
 
 /* HEADER */
-
 #logo-colegio {
     width: 50px;
     height: auto;
@@ -26,6 +25,10 @@ body {
     align-items: center;
     padding: 15px 22px;}
 
+nav a[aria-current="page"]{
+    font-weight: bold;
+    color: rgb(3, 122, 158);}
+
 .container-left {
     display: flex;
     align-items: center;
@@ -35,6 +38,17 @@ body {
     color: rgb(255, 255, 255);
     font-size: 20px;
     text-align: center;}
+
+.container-header a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 20px;
+    white-space: nowrap;}
+
+.container-header a:hover {
+    color: rgb(10, 117, 160);}
+/* HEADER */
 
 /* NAV */
 .container-header a {
@@ -49,7 +63,6 @@ body {
 
 
 /* CONTAINER DAD */
-
 .container-all {
     display: grid;
     grid-template-columns: minmax(280px, 1fr) minmax(0, 2fr);
@@ -61,12 +74,12 @@ body {
 
 
 /* QUIENES SOMOS */
-
 .container-quienes-somos {
     width: 100%;
     min-height: 320px;
     padding: 10px;
-    background-color: rgba(97, 97, 97, 0.192);
+    background-color: rgba(97, 97, 97, 0.123);
+    border: 1px solid rgba(49, 49, 49, 0.123);
     border-radius: 10px;}
 
 h2 {
@@ -76,7 +89,9 @@ h2 {
     margin: 5px 5px 10px;}
 
 .target-vision-mision {
-    background-color: rgba(19, 37, 119, 0.295);
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(1, 85, 153, 0.281);
     display: flex;
     align-items: flex-start;
     width: calc(100% - 20px);
@@ -87,10 +102,10 @@ h2 {
 
 
 /* UNIFORME */
-
 .uniforme {
     width: 100%;
-    background-color: rgba(97, 97, 97, 0.192);
+    background-color: rgba(97, 97, 97, 0.123);
+    border: 1px solid rgba(49, 49, 49, 0.123);
     border-radius: 10px;
     padding-bottom: 10px;}
 
@@ -100,13 +115,12 @@ h2 {
     align-items: stretch;
     flex-wrap: wrap;
     gap: 25px;
-    padding: 20px;}
+    padding-bottom: 5px;}
 
 .target-uniforme {
-    border: 1px solid rgb(10, 117, 160);
-    width: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.822);
+    width: 170px;
     max-width: 100%;
-    padding: 10px;
     padding-bottom: 20px;
     border-radius: 5px;
     text-align: center;
@@ -115,14 +129,11 @@ h2 {
 
 .imagen {
     display: block;
-    width: 100px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto 5px;}
+    width: 99%;
+    height: auto;}
 
 
 /* EGRESADOS */
-
 .egresado {
     width: 100%;
     background-color: rgba(97, 97, 97, 0.192);
@@ -157,7 +168,6 @@ h2 {
 
 
 /* MANUAL */
-
 #logo-colegio-manual {
     width: 200px;
     max-width: 100%;
@@ -172,32 +182,24 @@ h2 {
     border-radius: 10px;
     padding: 2%;}
 
-
-/* INFORMACIÓN */
-
 .informacion {
-    min-height: 100vh;
-}
-
-
-/* FOOTER */
+    min-height: 100vh;}
 
 .container-footer {
-    width: 100%;
     background-color: rgb(19, 37, 119);
-    color: rgb(255, 255, 255);
-    min-height: 5vh;
+    color: rgb(255 255 255);
+    height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    padding: 20px;
+    padding: 40px;
     text-align: center;}
-
+   
 
 /* TABLET */
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .container-header {
         padding: 15px;}
 
@@ -225,19 +227,16 @@ h2 {
 
 
 /* TABLET PEQUEÑA / CELULAR */
+@media (max-width: 768px) {
 
-@media (max-width: 750px) {
-
-    /* HEADER */
     .container-header {
-        min-height: auto;
         flex-direction: column;
         gap: 15px;
-        padding: 15px;}
+        padding: 15px 10px;}
 
     .container-left {
         justify-content: center;
-        text-align: center;}
+        width: 100%;}
 
     #logo-colegio {
         width: 45px;
@@ -247,17 +246,15 @@ h2 {
         font-size: 18px;}
 
     .container-header nav {
+        width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
         flex-wrap: wrap;
         gap: 10px;}
 
     .container-header a {
         margin-right: 0;
         font-size: 17px;}
-
-    /* CONTENIDO */
 
     .container-all {
         grid-template-columns: 1fr;
@@ -277,16 +274,12 @@ h2 {
         padding: 15px;
         margin: 10px;}
 
-
-    /* UNIFORME */
     .container-target-uniforme {
         gap: 15px;
         padding: 15px;}
 
     .target-uniforme {
         width: 120px;}
-
-    /* EGRESADOS */
 
     .container-target-egresado {
         gap: 15px;
@@ -296,15 +289,17 @@ h2 {
         width: 100%;
         max-width: 280px;}
 
-    /* MANUAL */
-
     .manual {
         padding: 20px;}
 
     #logo-colegio-manual {
         width: 160px;}
+    
+    .container-footer {
+        min-height: 8vh;
+        font-size: 16px;
+        padding: 15px;}
 }
-
 
 /* CELULAR PEQUEÑO */
 
@@ -348,5 +343,9 @@ h2 {
         width: 90px;}
 
     .container-footer {
-        font-size: 15px;}
+        font-size: 14px;}
+}
+
+@media (max-width:360px) {
+
 }

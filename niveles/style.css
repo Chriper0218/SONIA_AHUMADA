@@ -1,24 +1,19 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-}
+    padding: 0;}
 
 html,
 body {
     width: 100%;
     min-height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 
 /* HEADER */
-
 #logo-colegio {
     width: 50px;
     height: auto;
-    margin-right: 20px;
-}
+    margin-right: 20px;}
 
 .container-header {
     width: 100%;
@@ -27,47 +22,43 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 22px;
-}
+    padding: 15px 22px;}
+
+nav a[aria-current="page"]{
+    font-weight: bold;
+    color: rgb(3, 122, 158);}
 
 .container-left {
     display: flex;
     align-items: center;
-    min-width: 0;
-}
+    min-width: 0;}
 
 #p-header {
     color: rgb(255, 255, 255);
     font-size: 20px;
-    text-align: center;
-}
-
-
-/* NAV */
+    text-align: center;}
 
 .container-header a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     margin-right: 30px;
     font-size: 20px;
-    white-space: nowrap;
-}
+    white-space: nowrap;}
 
 .container-header a:hover {
-    color: rgb(10, 117, 160);
-}
-
-
-/* CONTENEDOR */
+    color: rgb(10, 117, 160);}
+/* HEADER */
 
 .container-dad {
+    display: flex;
+    align-items: center;
     width: 96%;
-    min-height: 82vh;
-    margin: 2% auto;
-}
-
+    min-height: 84vh;
+    margin: 2% auto;}
 
 /* NIVELES */
+h1 {
+    text-align: center;}
 
 .niveles {
     width: 100%;
@@ -76,191 +67,142 @@ body {
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
-    gap: 25px;
-}
+    gap: 25px;}
 
-
-/* IMÁGENES */
-
-img {
-    width: 100%;
-    max-width: 250px;
+.niveles img {
+    width: 90%;
     height: auto;
     border-radius: 10px;
     margin: 4px;
-}
-
+    border: 1px solid rgb(0,0,0);}
 
 /* TARJETAS */
-
 .target-niveles {
     width: 100%;
     min-height: 300px;
     text-align: center;
-    background-color: rgba(10, 117, 160, 0.514);
+    background-color: rgba(97, 97, 97, 0.123);
+    border: 1px solid rgba(49, 49, 49, 0.123);
     padding: 20px;
     font-size: 20px;
     border-radius: 10px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-
-i {
-    width: 200px;
-}
+    align-items: center;}
+/* NIVELES */
 
 
 /* FOOTER */
-
 .container-footer {
     background-color: rgb(19, 37, 119);
-    color: rgb(255, 255, 255);
-    min-height: 5vh;
+    color: rgb(255 255 255);
+    height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    padding: 20px;
-    text-align: center;
-}
+    padding: 40px;
+    text-align: center;}
+/* FOOTER */
 
-
-/* ========================= */
-/* TABLET */
-/* ========================= */
-
-@media (max-width: 1000px) {
-
+/* TABLET  */
+@media (max-width: 1024px) {
     .container-header {
-        padding: 15px;
-    }
+        padding: 15px;}
 
     .container-header a {
         margin-right: 15px;
-        font-size: 18px;
-    }
+        font-size: 18px;}
 
     .niveles {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
+        gap: 20px;}
 
     .target-niveles {
-        min-height: 280px;
-    }
+        min-height: 280px;}
 
     img {
-        max-width: 220px;
+        max-width: 80%;}
     }
-}
+/* TABLET  */
 
 
-/* ========================= */
-/* CELULAR */
-/* ========================= */
-
-@media (max-width: 700px) {
-
+/* CELULAR  */
+@media (max-width: 768px) {
     .container-header {
         flex-direction: column;
         gap: 15px;
-        padding: 15px 10px;
-    }
+        padding: 15px 10px;}
 
     .container-left {
         justify-content: center;
-        width: 100%;
-    }
+        width: 100%;}
 
     #logo-colegio {
         width: 45px;
-        margin-right: 10px;
-    }
+        margin-right: 10px;}
 
     #p-header {
-        font-size: 18px;
-    }
+        font-size: 18px;}
 
     .container-header nav {
         width: 100%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
-    }
+        gap: 10px;}
 
     .container-header a {
         margin-right: 0;
-        font-size: 17px;
-    }
-
-
-    /* CONTENEDOR */
+        font-size: 17px;}
 
     .container-dad {
         width: 92%;
         min-height: auto;
-        margin: 25px auto;
-    }
-
-
-    /* TARJETAS EN UNA COLUMNA */
+        margin: 25px auto;}
 
     .niveles {
         grid-template-columns: 1fr;
-        gap: 20px;
-    }
+        gap: 20px;}
 
     .target-niveles {
         width: 100%;
         min-height: 250px;
         padding: 18px;
-        font-size: 18px;
-    }
+        font-size: 18px;}
 
     img {
-        max-width: 200px;
-    }
-
-
-    /* FOOTER */
+        max-width: 65%;}
 
     .container-footer {
         min-height: 8vh;
         font-size: 16px;
-        padding: 15px;
+        padding: 15px;}
     }
-}
+/* CELULAR  */
 
-
-/* ========================= */
 /* CELULARES PEQUEÑOS */
-/* ========================= */
-
-@media (max-width: 400px) {
-
+@media (max-width: 480px) {
     #p-header {
-        font-size: 16px;
-    }
+        font-size: 16px;}
 
     .container-header a {
-        font-size: 15px;
-    }
+        font-size: 15px;}
 
     .target-niveles {
         min-height: 230px;
         font-size: 17px;
-        padding: 15px;
-    }
+        padding: 15px;}
 
     img {
-        max-width: 180px;
-    }
+        max-width: 80%;}
 
     .container-footer {
-        font-size: 14px;
+        font-size: 14px;}
     }
+/* CELULARES PEQUEÑOS */
+
+@media (max-width:360px) {
+    
 }
