@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo-colegio.png">
+    <title>I.E.D SONIA AHUMADA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+    <header>
+        <div class="container-header">
+            <div class="container-left">
+                <img src="imagenes/logo-colegio.png" alt="Logo colegio" id="logo-colegio">
+                <p id="p-header">I.E.D SONIA AHUMADA <br> IMPARABLES</p>
+            </div>
+
+            <div class="container-right">
+                <nav class="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="/quienes somos/quienesomos.html">Quienes somos</a>
+                    <a href="/niveles/niveles.html">Niveles</a>
+                    <a href="/contacto/contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+<!-- HEADER -->
+
+
+<!-- MAIN (INICIO) -->
+    <main>
+        <div class="container-main">
+            <div class="text-main">
+            <h1>Bienvenidos a <br> nuestra escuela </h1> 
+            <br>
+            <p class="p-main"> un lugar donde los sueños <br> comienzan a construirse.</p>
+            </div>
+        </div>
+    </main>
+<!-- MAIN (INICIO) -->
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="container-footer">
+        <p>© I.E.D SONIA AHUMADA, TODOS LOS DERECHOS RESERVADOS</p>
+    </div>
+</footer>
+<!-- FOOTER -->
+
+<!--SCRIPT PARA LOGOS-->
+<script>
+lucide.createIcons();
+</script>
+<!--SCRIPT PARA LOGOS-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const botonMenu = document.getElementById("menu-btn");
+            const enlacesMenu = document.getElementById("navlinks");
+
+            botonMenu.addEventListener("click", function () {
+                const abierto = enlacesMenu.classList.toggle("active");
+
+                botonMenu.textContent = abierto ? "✕" : "☰";
+                botonMenu.setAttribute("aria-expanded", String(abierto));
+                botonMenu.setAttribute(
+                    "aria-label",
+                    abierto ? "Cerrar menú" : "Abrir menú"
+                );
+            });
+
+            enlacesMenu.querySelectorAll("a").forEach(function (enlace) {
+                enlace.addEventListener("click", function () {
+                    enlacesMenu.classList.remove("active");
+                    botonMenu.textContent = "☰";
+                    botonMenu.setAttribute("aria-expanded", "false");
+                    botonMenu.setAttribute("aria-label", "Abrir menú");
+                });
+            });
+
+            /* Modal de usuario */
+            const modal = document.getElementById("modal-usuario");
+            const botonUsuario = document.getElementById("btn-usuario");
+            const cerrarModal = document.getElementById("cerrar-modal");
+
+            botonUsuario.addEventListener("click", function (evento) {
+                evento.preventDefault();
+                modal.classList.add("modal--show");
+            });
+
+            cerrarModal.addEventListener("click", function () {
+                modal.classList.remove("modal--show");
+            });
+
+            modal.addEventListener("click", function (evento) {
+                if (evento.target === modal) {
+                    modal.classList.remove("modal--show");
+                }
+            });
+
+            /* Cerrar menú con Escape */
+            document.addEventListener("keydown", function (evento) {
+                if (evento.key === "Escape") {
+                    enlacesMenu.classList.remove("active");
+                    botonMenu.textContent = "☰";
+                    botonMenu.setAttribute("aria-expanded", "false");
+                    modal.classList.remove("modal--show");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

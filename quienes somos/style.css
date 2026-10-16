@@ -1,0 +1,352 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+
+
+/* HEADER */
+
+#logo-colegio {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;}
+
+.container-header {
+    width: 100%;
+    min-height: 10vh;
+    background-color: rgb(19, 37, 119);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 22px;}
+
+.container-left {
+    display: flex;
+    align-items: center;
+    min-width: 0;}
+
+#p-header {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-align: center;}
+
+/* NAV */
+.container-header a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 20px;
+    white-space: nowrap;}
+
+.container-header a:hover {
+    color: rgb(10, 117, 160);}
+
+
+/* CONTAINER DAD */
+
+.container-all {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(0, 2fr);
+    gap: 30px;
+    width: 95%;
+    max-width: 1400px;
+    margin: 30px auto;
+    align-items: stretch;}
+
+
+/* QUIENES SOMOS */
+
+.container-quienes-somos {
+    width: 100%;
+    min-height: 320px;
+    padding: 10px;
+    background-color: rgba(97, 97, 97, 0.192);
+    border-radius: 10px;}
+
+h2 {
+    text-align: center;
+    color: rgb(19, 37, 119);
+    font-size: 35px;
+    margin: 5px 5px 10px;}
+
+.target-vision-mision {
+    background-color: rgba(19, 37, 119, 0.295);
+    display: flex;
+    align-items: flex-start;
+    width: calc(100% - 20px);
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow-wrap: break-word;}
+
+
+/* UNIFORME */
+
+.uniforme {
+    width: 100%;
+    background-color: rgba(97, 97, 97, 0.192);
+    border-radius: 10px;
+    padding-bottom: 10px;}
+
+.container-target-uniforme {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;}
+
+.target-uniforme {
+    border: 1px solid rgb(10, 117, 160);
+    width: 120px;
+    max-width: 100%;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(19, 37, 119);
+    overflow-wrap: break-word;}
+
+.imagen {
+    display: block;
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 5px;}
+
+
+/* EGRESADOS */
+
+.egresado {
+    width: 100%;
+    background-color: rgba(97, 97, 97, 0.192);
+    border-radius: 10px;
+    padding-bottom: 10px;}
+
+.container-target-egresado {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;}
+
+.target-egresado {
+    border: 1px solid rgb(10, 117, 160);
+    width: 280px;
+    max-width: 100%;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: rgb(19, 37, 119);
+    overflow-wrap: break-word;}
+
+.imagen-egresado {
+    display: block;
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 10px;}
+
+
+/* MANUAL */
+
+#logo-colegio-manual {
+    width: 200px;
+    max-width: 100%;
+    height: auto;}
+
+.manual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(97, 97, 97, 0.192);
+    border-radius: 10px;
+    padding: 2%;}
+
+
+/* INFORMACIÓN */
+
+.informacion {
+    min-height: 100vh;
+}
+
+
+/* FOOTER */
+
+.container-footer {
+    width: 100%;
+    background-color: rgb(19, 37, 119);
+    color: rgb(255, 255, 255);
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .container-header {
+        padding: 15px;}
+
+    .container-header a {
+        margin-right: 15px;
+        font-size: 18px;}
+
+    .container-all {
+        grid-template-columns: 1fr 1.5fr;
+        gap: 20px;
+        width: 94%;}
+
+    .container-target-uniforme {
+        gap: 15px; }
+
+    .target-uniforme {
+        width: 110px;}
+
+    .container-target-egresado {
+        gap: 15px;}
+
+    .target-egresado {
+        width: 240px;}
+}
+
+
+/* TABLET PEQUEÑA / CELULAR */
+
+@media (max-width: 750px) {
+
+    /* HEADER */
+    .container-header {
+        min-height: auto;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;}
+
+    .container-left {
+        justify-content: center;
+        text-align: center;}
+
+    #logo-colegio {
+        width: 45px;
+        margin-right: 10px;}
+
+    #p-header {
+        font-size: 18px;}
+
+    .container-header nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;}
+
+    .container-header a {
+        margin-right: 0;
+        font-size: 17px;}
+
+    /* CONTENIDO */
+
+    .container-all {
+        grid-template-columns: 1fr;
+        width: 92%;
+        margin: 25px auto;
+        gap: 25px;}
+
+    /* QUIENES SOMOS */
+    .container-quienes-somos {
+        min-height: auto;}
+
+    h2 {
+        font-size: 30px;}
+
+    .target-vision-mision {
+        width: calc(100% - 20px);
+        padding: 15px;
+        margin: 10px;}
+
+
+    /* UNIFORME */
+    .container-target-uniforme {
+        gap: 15px;
+        padding: 15px;}
+
+    .target-uniforme {
+        width: 120px;}
+
+    /* EGRESADOS */
+
+    .container-target-egresado {
+        gap: 15px;
+        padding: 15px;}
+
+    .target-egresado {
+        width: 100%;
+        max-width: 280px;}
+
+    /* MANUAL */
+
+    .manual {
+        padding: 20px;}
+
+    #logo-colegio-manual {
+        width: 160px;}
+}
+
+
+/* CELULAR PEQUEÑO */
+
+@media (max-width: 480px) {
+    #p-header {
+        font-size: 16px;}
+
+    #logo-colegio {
+        width: 40px;}
+
+    .container-header a {
+        font-size: 15px;}
+
+    .container-all {
+        width: 94%;
+        margin: 20px auto;}
+
+    h2 {
+        font-size: 27px;}
+
+    .target-vision-mision {
+        padding: 12px;}
+
+    .container-target-uniforme {
+        padding: 10px;
+        gap: 10px;}
+
+    .target-uniforme {
+        width: 110px;}
+
+    .container-target-egresado {
+        padding: 10px;}
+
+    .target-egresado {
+        width: 100%;}
+
+    .imagen {
+        width: 90px;}
+
+    .imagen-egresado {
+        width: 90px;}
+
+    .container-footer {
+        font-size: 15px;}
+}
