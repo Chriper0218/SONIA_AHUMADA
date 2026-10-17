@@ -124,7 +124,7 @@ h1 {
     .container-main{
         background-position: center center;
         background: linear-gradient( to right,rgba(0, 0, 0, 0.945),rgba(0, 0, 255, 0.199)),
-        url(imagenes/background.jpeg);}
+        url(imagenes/background-mobile.jpeg);}
 
    /* HEADER */
     .container-header {
@@ -175,8 +175,8 @@ h1 {
 
     .container-main{
         background-position: center center;
-        background: linear-gradient( to right,rgba(0, 0, 0, 0.945),rgba(0, 0, 255, 0.199)),
-        url(imagenes/background.jpeg);}
+        background: linear-gradient( to right,rgba(0, 0, 0, 0.945),rgba(1, 1, 58, 0.548)),
+        url(imagenes/background-mobile.jpeg);}
 
     .container-header {
         padding: 10px 12px;}
@@ -208,7 +208,7 @@ h1 {
 
     .container-main{
         background-position: center center;
-        background: linear-gradient( to right,rgba(0, 0, 0, 0.945),rgba(0, 0, 255, 0.199)),url(imagenes/background-mobile.jpg);}
+        background-color: rgb(19, 37, 119);}
 
     #logo-colegio {
         width: 35px;}

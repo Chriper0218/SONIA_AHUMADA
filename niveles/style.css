@@ -79,11 +79,11 @@ h1 {
 /* TARJETAS */
 .target-niveles {
     width: 100%;
-    min-height: 300px;
+    height: 500px;
     text-align: center;
     background-color: rgba(97, 97, 97, 0.123);
     border: 1px solid rgba(49, 49, 49, 0.123);
-    padding: 20px;
+    padding: 10px;
     font-size: 20px;
     border-radius: 10px;
     display: flex;
@@ -120,7 +120,7 @@ h1 {
         gap: 20px;}
 
     .target-niveles {
-        min-height: 280px;}
+        height: 460px;}
 
     img {
         max-width: 80%;}
@@ -168,12 +168,12 @@ h1 {
 
     .target-niveles {
         width: 100%;
-        min-height: 250px;
-        padding: 18px;
-        font-size: 18px;}
+        min-height: 380px;
+        padding: 10%;
+        font-size: 20px;}
 
     img {
-        max-width: 65%;}
+        max-width: 75%;}
 
     .container-footer {
         min-height: 8vh;
@@ -191,7 +191,7 @@ h1 {
         font-size: 15px;}
 
     .target-niveles {
-        min-height: 230px;
+        height: 380px;
         font-size: 17px;
         padding: 15px;}
 
